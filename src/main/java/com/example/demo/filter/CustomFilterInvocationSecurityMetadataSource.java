@@ -38,10 +38,10 @@ implements FilterInvocationSecurityMetadataSource{
 				for(int i=0;i<roleArr.length;i++) {
 					roleArr[i]=roles.get(i).getName();
 				}
-				return SecurityConfig.createList("ROLE_LOGIN");
+				return SecurityConfig.createList(roleArr);
 			}
 		}
-		return null;
+		return SecurityConfig.createList("ROLE_LOGIN");
 	}
 	/**
 	 * 返回所有定義好的權限資源
